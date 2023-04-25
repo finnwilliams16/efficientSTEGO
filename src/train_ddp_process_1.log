@@ -1,0 +1,33 @@
+[2023-01-11 00:15:41,187][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp6tf0xees
+[2023-01-11 00:15:41,188][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp6tf0xees/_remote_module_non_scriptable.py
+[2023-01-11 00:16:17,276][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-01-11 00:16:27,290][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-01-11 00:16:37,305][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-01-11 00:16:41,633][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-01-11 00:52:24,514][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpppszzjuj
+[2023-01-11 00:52:24,553][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpppszzjuj/_remote_module_non_scriptable.py
+[2023-01-11 00:53:53,780][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-01-11 00:54:01,632][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 11:17:39,872][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpq3bej7nt
+[2023-02-13 11:17:39,912][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpq3bej7nt/_remote_module_non_scriptable.py
+[2023-02-13 11:18:29,028][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-02-13 11:18:39,039][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-02-13 11:18:49,044][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-02-13 11:18:59,046][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-02-13 11:18:59,773][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:12:42,079][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmplejr2vz1
+[2023-02-13 12:12:42,087][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmplejr2vz1/_remote_module_non_scriptable.py
+[2023-02-13 12:13:46,583][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-02-13 12:13:54,080][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:32:36,892][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpzwdapgau
+[2023-02-13 12:32:36,902][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpzwdapgau/_remote_module_non_scriptable.py
+[2023-02-13 12:33:30,911][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-02-13 12:33:40,914][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-02-13 12:33:50,916][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-02-13 12:33:55,663][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:50:39,932][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmppupbf0rx
+[2023-02-13 12:50:39,942][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmppupbf0rx/_remote_module_non_scriptable.py
+[2023-02-13 12:51:36,408][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-02-13 12:51:46,414][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-02-13 12:51:56,416][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-02-13 12:52:00,472][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.

@@ -1,0 +1,8 @@
+Mon 24 Apr 17:00:41 BST 2023
+Traceback (most recent call last):
+  File "src/train_segmentation.py", line 3, in <module>
+    from modules import *
+  File "/home/acb19fw/git/STEGO_v2/src/modules.py", line 5, in <module>
+    from inplace_abn import InPlaceABN
+ModuleNotFoundError: No module named 'inplace_abn'
+Mon 24 Apr 17:00:45 BST 2023

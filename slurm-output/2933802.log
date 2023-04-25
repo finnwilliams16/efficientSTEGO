@@ -1,0 +1,6 @@
+Mon 10 Apr 10:56:19 BST 2023
+  File "src/train_segmentation.py", line 73
+    if not cfg.continuousp_PzeMSVi0sFbksLqdjTVQgEVa9Im1rM1FfHb8
+                                                              ^
+SyntaxError: invalid syntax
+Mon 10 Apr 10:56:19 BST 2023

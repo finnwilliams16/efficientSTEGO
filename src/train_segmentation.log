@@ -1,0 +1,187 @@
+[2023-01-06 22:58:02,877][lightning][INFO] - GPU available: True, used: True
+[2023-01-06 22:58:02,878][lightning][INFO] - TPU available: False, using: 0 TPU cores
+[2023-01-06 22:58:02,878][lightning][INFO] - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+[2023-01-06 22:58:53,878][lightning][INFO] - initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/4
+[2023-01-06 22:59:13,940][lightning][INFO] - initializing ddp: GLOBAL_RANK: 1, MEMBER: 2/4
+[2023-01-06 22:59:13,995][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2023-01-06 22:59:23,998][root][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=1, timeout=0:30:00)
+[2023-01-06 22:59:33,797][lightning][INFO] - initializing ddp: GLOBAL_RANK: 2, MEMBER: 3/4
+[2023-01-06 22:59:33,798][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 2
+[2023-01-06 22:59:34,003][root][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-01-06 22:59:43,802][root][INFO] - Waiting in store based barrier to initialize process group for rank: 2, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-01-06 22:59:44,005][root][INFO] - Waiting in store based barrier to initialize process group for rank: 1, key: store_based_barrier_key:1 (world_size=4, worker_count=2, timeout=0:30:00)
+[2023-01-06 22:59:45,480][lightning][INFO] - initializing ddp: GLOBAL_RANK: 3, MEMBER: 4/4
+[2023-01-06 22:59:45,481][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-01-06 22:59:45,491][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-01-06 22:59:45,491][lightning][INFO] - ----------------------------------------------------------------------------------------------------
+[2023-01-06 22:59:45,491][lightning][INFO] - distributed_backend=ddp
+[2023-01-06 22:59:45,492][lightning][INFO] - All DDP processes registered. Starting ddp with 4 processes
+[2023-01-06 22:59:45,492][lightning][INFO] - ----------------------------------------------------------------------------------------------------
+[2023-01-11 00:14:12,253][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpd03dwy_6
+[2023-01-11 00:14:12,276][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpd03dwy_6/_remote_module_non_scriptable.py
+[2023-01-11 00:16:41,631][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-01-11 00:16:41,632][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-01-11 00:49:40,707][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpac591zoe
+[2023-01-11 00:49:40,741][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpac591zoe/_remote_module_non_scriptable.py
+[2023-01-11 00:54:01,628][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-01-11 00:54:01,639][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-09 13:07:56,750][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpf3ozkam6
+[2023-02-09 13:07:56,758][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpf3ozkam6/_remote_module_non_scriptable.py
+[2023-02-09 13:23:48,363][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpfic4xjfl
+[2023-02-09 13:23:48,383][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpfic4xjfl/_remote_module_non_scriptable.py
+[2023-02-09 13:24:54,100][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 13:24:54,100][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 13:33:13,093][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpddu5rcyb
+[2023-02-09 13:33:13,105][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpddu5rcyb/_remote_module_non_scriptable.py
+[2023-02-09 13:34:11,508][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 13:34:11,508][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 14:12:41,748][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp2motqw8z
+[2023-02-09 14:12:41,764][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp2motqw8z/_remote_module_non_scriptable.py
+[2023-02-09 14:13:46,016][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 14:13:46,016][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 14:20:22,802][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp5115swtd
+[2023-02-09 14:20:22,806][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp5115swtd/_remote_module_non_scriptable.py
+[2023-02-09 14:21:18,389][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 14:21:18,389][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 14:57:43,932][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp8vngokv7
+[2023-02-09 14:57:43,941][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp8vngokv7/_remote_module_non_scriptable.py
+[2023-02-09 14:58:42,660][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 14:58:42,661][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 16:03:18,526][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmprfgx529d
+[2023-02-09 16:03:18,534][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmprfgx529d/_remote_module_non_scriptable.py
+[2023-02-09 16:04:15,247][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 16:04:15,247][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-09 18:44:43,938][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp9qcrmox3
+[2023-02-09 18:44:43,944][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp9qcrmox3/_remote_module_non_scriptable.py
+[2023-02-09 19:13:57,666][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp_4w6748w
+[2023-02-09 19:13:57,667][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp_4w6748w/_remote_module_non_scriptable.py
+[2023-02-09 19:14:34,961][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-09 19:14:34,961][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-13 11:16:15,842][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpkao4e02i
+[2023-02-13 11:16:15,852][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpkao4e02i/_remote_module_non_scriptable.py
+[2023-02-13 11:18:59,764][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-13 11:18:59,765][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:11:13,265][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp9qa55j1v
+[2023-02-13 12:11:13,268][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp9qa55j1v/_remote_module_non_scriptable.py
+[2023-02-13 12:13:54,072][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-13 12:13:54,081][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:31:22,968][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpd4lw5txo
+[2023-02-13 12:31:22,979][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpd4lw5txo/_remote_module_non_scriptable.py
+[2023-02-13 12:33:55,657][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-13 12:33:55,657][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:49:25,426][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp95x7go85
+[2023-02-13 12:49:25,438][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp95x7go85/_remote_module_non_scriptable.py
+[2023-02-13 12:52:00,463][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-13 12:52:00,463][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 15:48:41,019][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpjqfq0pka
+[2023-02-13 15:48:41,030][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpjqfq0pka/_remote_module_non_scriptable.py
+[2023-02-13 15:49:50,885][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-13 15:49:50,885][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-14 13:42:27,173][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmprfvf72ts
+[2023-02-14 13:42:27,186][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmprfvf72ts/_remote_module_non_scriptable.py
+[2023-02-14 16:30:35,820][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpqeigathz
+[2023-02-14 16:30:35,831][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpqeigathz/_remote_module_non_scriptable.py
+[2023-02-14 16:44:20,051][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmphbe07p2j
+[2023-02-14 16:44:20,076][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmphbe07p2j/_remote_module_non_scriptable.py
+[2023-02-15 13:30:07,180][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp_bbr8t_b
+[2023-02-15 13:30:07,214][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp_bbr8t_b/_remote_module_non_scriptable.py
+[2023-02-15 13:37:51,349][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp803ig39h
+[2023-02-15 13:37:51,363][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp803ig39h/_remote_module_non_scriptable.py
+[2023-02-15 13:45:15,022][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpanxol_yk
+[2023-02-15 13:45:15,035][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpanxol_yk/_remote_module_non_scriptable.py
+[2023-02-15 13:52:39,918][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpm48vd181
+[2023-02-15 13:52:39,943][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpm48vd181/_remote_module_non_scriptable.py
+[2023-02-15 14:17:05,781][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp1jmn5zat
+[2023-02-15 14:17:05,805][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp1jmn5zat/_remote_module_non_scriptable.py
+[2023-02-15 14:26:51,613][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp77aq7yaa
+[2023-02-15 14:26:51,615][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp77aq7yaa/_remote_module_non_scriptable.py
+[2023-02-15 16:27:17,068][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpa8i6yh1d
+[2023-02-15 16:27:17,085][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpa8i6yh1d/_remote_module_non_scriptable.py
+[2023-02-15 16:28:44,658][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-15 16:28:44,702][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-02-15 16:48:59,141][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpmqeqvy30
+[2023-02-15 16:48:59,172][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpmqeqvy30/_remote_module_non_scriptable.py
+[2023-02-15 16:51:03,045][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-02-15 16:51:03,088][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2023-03-13 15:14:22,802][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpccyafqrt
+[2023-03-13 15:14:22,819][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpccyafqrt/_remote_module_non_scriptable.py
+[2023-03-13 16:52:45,681][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp98j7j3sw
+[2023-03-13 16:52:45,693][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp98j7j3sw/_remote_module_non_scriptable.py
+[2023-03-14 15:55:54,802][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpq0vv1215
+[2023-03-14 15:55:54,816][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpq0vv1215/_remote_module_non_scriptable.py
+[2023-03-14 15:57:58,537][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpg4ahgjk9
+[2023-03-14 15:57:58,537][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpg4ahgjk9/_remote_module_non_scriptable.py
+[2023-03-14 16:03:39,326][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmphy2i3qi0
+[2023-03-14 16:03:39,326][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmphy2i3qi0/_remote_module_non_scriptable.py
+[2023-03-14 16:04:49,405][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpdvj9e8vi
+[2023-03-14 16:04:49,406][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpdvj9e8vi/_remote_module_non_scriptable.py
+[2023-04-13 12:25:27,072][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-14 11:58:45,268][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-14 12:02:14,622][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-20 15:26:46,166][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-20 15:58:56,063][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-20 17:02:26,308][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 14:06:32,714][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 14:25:30,410][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 16:22:30,570][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 16:37:26,381][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 20:42:16,123][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-21 21:14:48,162][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-22 00:39:13,051][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 15:47:01,176][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 16:17:43,181][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 16:22:40,282][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 16:34:14,043][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 16:35:18,399][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:26:09,617][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:28:02,329][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:29:29,498][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:36:19,102][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:39:59,480][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:41:15,866][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:50:23,994][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 18:51:32,800][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 19:08:43,067][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 20:48:17,831][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:14:28,160][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:15:09,152][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:15:59,602][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:16:25,667][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:23:51,491][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-23 21:29:24,952][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 00:23:28,799][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 00:40:01,644][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 01:21:19,758][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:15:24,368][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:29:29,509][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:30:39,081][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:52:48,268][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:53:44,201][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 14:54:53,474][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:05:12,797][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:12:12,541][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:13:22,492][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:14:09,209][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:15:29,811][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:18:12,933][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:21:59,202][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:22:49,073][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:24:37,831][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:34:48,256][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:37:08,018][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:38:13,302][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:43:04,351][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 15:50:24,426][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:12:58,697][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:16:37,702][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:18:46,090][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:25:46,734][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:26:39,995][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:27:22,132][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:27:58,231][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:29:13,281][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:32:16,292][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:34:20,544][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:44:14,256][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:47:47,833][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2023-04-24 16:57:43,996][root][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0

@@ -1,0 +1,24 @@
+[2023-01-11 00:16:05,161][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp_0l8a7rd
+[2023-01-11 00:16:05,167][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp_0l8a7rd/_remote_module_non_scriptable.py
+[2023-01-11 00:16:41,627][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-01-11 00:16:41,637][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-01-11 00:52:29,088][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpx2guxj4s
+[2023-01-11 00:52:29,125][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpx2guxj4s/_remote_module_non_scriptable.py
+[2023-01-11 00:54:01,629][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-01-11 00:54:01,629][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 11:18:07,128][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp_lrpypah
+[2023-02-13 11:18:07,166][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp_lrpypah/_remote_module_non_scriptable.py
+[2023-02-13 11:18:59,753][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-02-13 11:18:59,764][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:12:48,267][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpfj3_locw
+[2023-02-13 12:12:48,282][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpfj3_locw/_remote_module_non_scriptable.py
+[2023-02-13 12:13:54,064][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-02-13 12:13:54,075][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:33:01,303][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmp9y3rtk6t
+[2023-02-13 12:33:01,317][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmp9y3rtk6t/_remote_module_non_scriptable.py
+[2023-02-13 12:33:55,643][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-02-13 12:33:55,664][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2023-02-13 12:51:32,130][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpmdd9iidu
+[2023-02-13 12:51:32,135][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpmdd9iidu/_remote_module_non_scriptable.py
+[2023-02-13 12:52:00,455][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2023-02-13 12:52:00,465][torch.distributed.distributed_c10d][INFO] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.

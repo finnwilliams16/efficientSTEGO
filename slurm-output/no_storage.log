@@ -1,0 +1,240 @@
+Tue  4 Apr 03:50:01 BST 2023
+src/train_segmentation.py:369: UserWarning: 
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="configs", config_name="train_config.yml") # Defines main function to run
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/hydra/plugins/config_source.py:125: UserWarning: Support for .yml files is deprecated. Use .yaml extension for Hydra config files
+  "Support for .yml files is deprecated. Use .yaml extension for Hydra config files"
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/hydra/_internal/hydra.py:127: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/next/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  configure_logging=with_log_configuration,
+Global seed set to 0
+output_root: ../
+pytorch_data_dir: /shared/mvg_dcs/UG_22-23/finn
+experiment_name: exp1
+log_dir: cocostuff27
+azureml_logging: false
+submitting_to_aml: false
+subset: false
+progress_bar: false
+epochs: 1
+num_workers: 10
+max_steps: 500000
+batch_size: 16
+num_neighbors: 7
+dataset_name: cocostuff27
+dir_dataset_name: null
+dir_dataset_n_classes: 5
+has_labels: false
+crop_type: five
+crop_ratio: 0.5
+res: 224
+loader_crop_type: center
+extra_clusters: 0
+use_true_labels: false
+use_recalibrator: false
+model_type: vit_small
+arch: dino
+use_fit_model: false
+dino_feat_type: feat
+projection_type: nonlinear
+dino_patch_size: 8
+granularity: 1
+continuous: true
+dim: 70
+dropout: true
+zero_clamp: true
+lr: 0.0005
+pretrained_weights: null
+use_salience: false
+stabalize: false
+stop_at_zero: true
+pointwise: true
+feature_samples: 11
+neg_samples: 5
+aug_alignment_weight: 0.0
+correspondence_weight: 1.0
+neg_inter_weight: 0.63
+pos_inter_weight: 0.25
+pos_intra_weight: 0.67
+neg_inter_shift: 0.46
+pos_inter_shift: 0.12
+pos_intra_shift: 0.18
+rec_weight: 0.0
+repulsion_weight: 0.0
+crf_weight: 0.0
+alpha: 0.5
+beta: 0.15
+gamma: 0.05
+w1: 10.0
+w2: 3.0
+shift: 0.0
+crf_samples: 1000
+color_space: rgb
+reset_probe_steps: null
+n_images: 5
+scalar_log_freq: 1
+checkpoint_freq: 50
+val_freq: 100
+hist_freq: 100
+
+../data
+../
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torchmetrics/utilities/prints.py:36: UserWarning: Torchmetrics v0.9 introduced a new argument class property called `full_state_update` that has
+                not been set for this class (UnsupervisedMetrics). The property determines if `update` by
+                default needs access to the full metric state. If this is not the case, significant speedups can be
+                achieved and we recommend setting this to `False`.
+                We provide an checking function
+                `from torchmetrics.utilities import check_forward_full_state_property`
+                that can be used to check if the `full_state_update=True` (old and potential slower behaviour,
+                default for now) or if `full_state_update=False` can be used safely.
+                
+  warnings.warn(*args, **kwargs)
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:287: LightningDeprecationWarning: Passing `Trainer(accelerator='ddp')` has been deprecated in v1.5 and will be removed in v1.7. Use `Trainer(strategy='ddp')` instead.
+  f"Passing `Trainer(accelerator={self.distributed_backend!r})` has been deprecated"
+Multi-processing is handled by Slurm.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+here1
+here2
+Since no pretrained weights have been provided, we load the reference pretrained DINO weights.
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torch/_jit_internal.py:505: LightningDeprecationWarning: The `LightningModule.loaded_optimizer_states_dict` property is deprecated in v1.4 and will be removed in v1.6.
+  item = getattr(mod, name)
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torch/_jit_internal.py:505: LightningDeprecationWarning: The `LightningModule.model_size` property was deprecated in v1.5 and will be removed in v1.7. Please use the `pytorch_lightning.utilities.memory.get_model_size_mb`.
+  item = getattr(mod, name)
+/home/acb19fw/git/STEGO_v2/src/modules.py:85: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert (img.shape[2] % self.patch_size == 0)
+/home/acb19fw/git/STEGO_v2/src/modules.py:86: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert (img.shape[3] % self.patch_size == 0)
+/home/acb19fw/git/STEGO_v2/src/dino/vision_transformer.py:179: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if npatch == N and w == h:
+Global seed set to 0
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loggers/tensorboard.py:251: UserWarning: Could not log computational graph since the `model.example_input_array` attribute is not set or `input_array` was not given
+  UserWarning,
+Missing logger folder: ../logs/cocostuff27/cocostuff27_exp1_date_Apr04_03-50-18/default
+Set SLURM handle signals.
+
+   | Name                     | Type                       | Params
+-------------------------------------------------------------------------
+0  | net                      | DinoFeaturizer             | 21.9 M
+1  | train_cluster_probe      | ClusterLookup              | 1.9 K 
+2  | cluster_probe            | ClusterLookup              | 1.9 K 
+3  | linear_probe             | Conv2d                     | 1.9 K 
+4  | decoder                  | Conv2d                     | 27.3 K
+5  | cluster_metrics          | UnsupervisedMetrics        | 0     
+6  | linear_metrics           | UnsupervisedMetrics        | 0     
+7  | test_cluster_metrics     | UnsupervisedMetrics        | 0     
+8  | test_linear_metrics      | UnsupervisedMetrics        | 0     
+9  | linear_probe_loss_fn     | CrossEntropyLoss           | 0     
+10 | crf_loss_fn              | ContrastiveCRFLoss         | 0     
+11 | contrastive_corr_loss_fn | ContrastiveCorrelationLoss | 0     
+-------------------------------------------------------------------------
+234 K     Trainable params
+21.7 M    Non-trainable params
+21.9 M    Total params
+87.620    Total estimated model params size (MB)
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bicubic is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+Global seed set to 0
+/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/torchmetrics/utilities/prints.py:36: UserWarning: The ``compute`` method of metric UnsupervisedMetrics was called before the ``update`` method which may lead to errors, as metric states have not yet been updated.
+  warnings.warn(*args, **kwargs)
+[W reducer.cpp:346] Warning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [27, 70, 1, 1], strides() = [70, 1, 70, 70]
+bucket_view.sizes() = [27, 70, 1, 1], strides() = [70, 1, 1, 1] (function operator())
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+RESETTING TFEVENT FILE
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "src/train_segmentation.py", line 530, in my_app
+    trainer.fit(model, train_loader, val_loader)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 741, in fit
+    self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 685, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 777, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1199, in _run
+    self._dispatch()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1279, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1289, in run_stage
+    return self._run_train()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1319, in _run_train
+    self.fit_loop.run()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 146, in run
+    self.on_advance_end()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 242, in on_advance_end
+    self._run_validation()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 337, in _run_validation
+    self.val_loop.run()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 151, in run
+    output = self.on_run_end()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 140, in on_run_end
+    self._on_evaluation_end()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 202, in _on_evaluation_end
+    self.trainer.call_hook("on_validation_end", *args, **kwargs)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1495, in call_hook
+    callback_fx(*args, **kwargs)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/callback_hook.py", line 221, in on_validation_end
+    callback.on_validation_end(self, self.lightning_module)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 333, in on_validation_end
+    self.save_checkpoint(trainer)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 398, in save_checkpoint
+    self._save_none_monitor_checkpoint(trainer, monitor_candidates)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 696, in _save_none_monitor_checkpoint
+    trainer.save_checkpoint(filepath, self.save_weights_only)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1913, in save_checkpoint
+    self.checkpoint_connector.save_checkpoint(filepath, weights_only)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 478, in save_checkpoint
+    self.trainer.training_type_plugin.save_checkpoint(_checkpoint, filepath)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 294, in save_checkpoint
+    return self.checkpoint_io.save_checkpoint(checkpoint, filepath)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/plugins/io/torch_plugin.py", line 37, in save_checkpoint
+    atomic_save(checkpoint, path)
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/pytorch_lightning/utilities/cloud_io.py", line 70, in atomic_save
+    f.write(bytesbuffer.getvalue())
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/fsspec/core.py", line 122, in __exit__
+    self.close()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/fsspec/core.py", line 142, in close
+    f.close()
+  File "/home/acb19fw/.conda/envs/stego_env/lib/python3.6/site-packages/fsspec/implementations/local.py", line 345, in close
+    return self.f.close()
+OSError: [Errno 28] No space left on device
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Tue  4 Apr 12:37:41 BST 2023
