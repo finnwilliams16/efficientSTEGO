@@ -30,17 +30,12 @@ class SemanticHead(nn.Module):
 
         self.softmax = nn.Softmax(dim=1)
         self.cross_entropy_loss = nn.CrossEntropyLoss(reduction='none')
-        self.connector32 = torch.nn.Conv2d(384, 256, (1, 1))
-        self.connector16 = torch.nn.Conv2d(384, 256, (1, 1))
-        self.connector8 = torch.nn.Conv2d(384, 256, (1, 1))
-        self.connector4 = torch.nn.Conv2d(384, 256, (1, 1))
-        self.connectorEnd = torch.nn.Conv2d(512, 70, (1, 1))
 
     def forward(self, inputs, targets={}):
         # TODO Make a loop
         # The forward is apply in a bottom up manner
         # x32 size
-        p_32 = self.connector32(inputs)
+        p_32 = inputs
         p_32 = self.dpc_x32(p_32)
         # [B, C, x32H, x32W] -> [B, C, x16H, x16W]
         p_32_to_merge = F.interpolate(
@@ -56,9 +51,8 @@ class SemanticHead(nn.Module):
             align_corners=False)
 
         # x16 size
-        p_16 = self.connector16(inputs)
+        p_16 = inputs
         p_16 = self.dpc_x16(p_16)
-        p_16 = torch.nn.functional.interpolate(p_16, scale_factor=(2, 2), mode='bilinear', align_corners=False)
         p_16_to_merge = torch.add(p_32_to_merge, p_16)
         # [B, C, x16H, x16W] -> [B, C, x4H, x4W]
         p_16 = F.interpolate(
@@ -70,9 +64,8 @@ class SemanticHead(nn.Module):
         p_16_to_merge = self.mc_16_to_8(p_16_to_merge)
 
         # x8 size
-        p_8 = self.connector8(inputs)
+        p_8 = inputs
         p_8 = self.lsfe_x8(p_8)
-        p_8 = torch.nn.functional.interpolate(p_8, scale_factor=(4, 4), mode='bilinear', align_corners=False)
         p_8 = torch.add(p_16_to_merge, p_8)
         # [B, C, x8H, x8W] -> [B, C, x4H, x4W]
         p_8_to_merge = self.mc_8_to_4(p_8)
@@ -84,18 +77,14 @@ class SemanticHead(nn.Module):
             align_corners=False)
 
         # x4 size
-        p_4 = self.connector4(inputs)
+        p_4 = inputs
         p_4 = self.lsfe_x4(p_4)
-        p_4 = torch.nn.functional.interpolate(p_4, scale_factor=(8, 8), mode='bilinear', align_corners=False)
-
         p_4 = torch.add(p_8_to_merge, p_4)
 
         # Create output
         # [B, 128, x4H, x4W] -> [B, 512, x4H, x4W]
         outputs = torch.cat((p_32, p_16, p_8, p_4), dim=1)
-        out = self.connectorEnd(outputs)
-        out = F.interpolate(out, scale_factor=0.125, mode='bilinear', align_corners=False)
-        return out
+        return outputs
 
 
     def loss(self, inputs, targets):
@@ -125,11 +114,11 @@ class LSFE(nn.Module):
     def __init__(self):
         super().__init__()
         # Separable Conv
-        self.conv_1 = DepthwiseSeparableConv(256, 128, 3, padding=1)
-        self.conv_2 = DepthwiseSeparableConv(128, 128, 3, padding=1)
+        self.conv_1 = DepthwiseSeparableConv(768, 384, 3, padding=1)
+        self.conv_2 = DepthwiseSeparableConv(384, 384, 3, padding=1)
         # Inplace BN + Leaky Relu
-        self.abn_1 = InPlaceABN(128)
-        self.abn_2 = InPlaceABN(128)
+        self.abn_1 = InPlaceABN(384)
+        self.abn_2 = InPlaceABN(384)
 
     def forward(self, inputs):
         # Apply first conv
@@ -146,11 +135,11 @@ class MC(nn.Module):
     def __init__(self):
         super().__init__()
         # Separable Conv
-        self.conv_1 = DepthwiseSeparableConv(128, 128, 3, padding=1)
-        self.conv_2 = DepthwiseSeparableConv(128, 128, 3, padding=1)
+        self.conv_1 = DepthwiseSeparableConv(384, 384, 3, padding=1)
+        self.conv_2 = DepthwiseSeparableConv(384, 384, 3, padding=1)
         # Inplace BN + Leaky Relu
-        self.abn_1 = InPlaceABN(128)
-        self.abn_2 = InPlaceABN(128)
+        self.abn_1 = InPlaceABN(384)
+        self.abn_2 = InPlaceABN(384)
 
     def forward(self, inputs):
         # Apply first conv
@@ -176,33 +165,34 @@ class DPC(nn.Module):
     def __init__(self):
         super().__init__()
         options = {
-            'in_channels'   : 256,
-            'out_channels'  : 256,
-            'kernel_size'   : 3
+            'in_channels'   : 384,
+            'out_channels'  : 16,
+            'kernel_size'   : 1
         }
+        in_place_abn_dims = 16
         self.conv_first = DepthwiseSeparableConv(dilation=(1, 6),
                                                  padding=(1, 6),
                                                  **options)
-        self.iabn_first = InPlaceABN(256)
+        self.iabn_first = InPlaceABN(in_place_abn_dims)
         # Branch 1
         self.conv_branch_1 = DepthwiseSeparableConv(padding=1,
                                                     **options)
-        self.iabn_branch_1 = InPlaceABN(256)
+        self.iabn_branch_1 = InPlaceABN(in_place_abn_dims)
         # Branch 2
         self.conv_branch_2 = DepthwiseSeparableConv(dilation=(6, 21),
                                                     padding=(6, 21),
                                                     **options)
-        self.iabn_branch_2 = InPlaceABN(256)
+        self.iabn_branch_2 = InPlaceABN(in_place_abn_dims)
         #Branch 3
         self.conv_branch_3 = DepthwiseSeparableConv(dilation=(18, 15),
                                                     padding=(18, 15),
                                                     **options)
-        self.iabn_branch_3 = InPlaceABN(256)
+        self.iabn_branch_3 = InPlaceABN(in_place_abn_dims)
         # Branch 4
         self.conv_branch_4 = DepthwiseSeparableConv(dilation=(6, 3),
                                                     padding=(6, 3),
                                                     **options)
-        self.iabn_branch_4 = InPlaceABN(256)
+        self.iabn_branch_4 = InPlaceABN(in_place_abn_dims)
         # Last conv
         # There is some mismatch in the paper about the dimension of this conv
         # In the paper it says "This tensor is then finally passed through a
@@ -211,15 +201,14 @@ class DPC(nn.Module):
         # The MC module schema also show an input of 256.
         # In order to have 512 channel at the concatenation of all layers,
         # I choosed 128 output channels
-        self.conv_last = nn.Conv2d(1280, 128, 1)
-        self.iabn_last = InPlaceABN(128)
-        #self.connector = torch.nn.Conv2d(256, 384, (1, 1))
-        #self.efficientPS_to_STEGO = torch.nn.Conv2d(128, 70, (1, 1))
+        self.conv_last = nn.Conv2d(160, 16, 1)
+        self.iabn_last = InPlaceABN(16)
 
     def forward(self, inputs):
         # First conv
-        #inputs = self.connector(inputs)
-        inputs = self.conv_first(inputs)
+        print(inputs.shape)
+        cat = torch.cat([inputs for i in range(24)], dim=0)
+        inputs = self.conv_first(cat)
         inputs = self.iabn_first(inputs)
         # Branch 1
         branch_1 = self.conv_branch_1(inputs)
@@ -240,11 +229,4 @@ class DPC(nn.Module):
             dim=1)
         # Last conv
         outputs = self.conv_last(concat)
-        outputs = self.iabn_last(outputs)
-        return outputs
-
-
-
-
-
-
+        return self.iabn_last(outputs)
