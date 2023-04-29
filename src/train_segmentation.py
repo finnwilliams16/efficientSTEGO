@@ -519,8 +519,6 @@ def my_app(cfg: DictConfig) -> None: # ??
 
     trainer.fit(model, train_loader, val_loader)
 
-
-
 if __name__ == "__main__":
     prep_args()
     my_app()
