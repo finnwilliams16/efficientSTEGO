@@ -11,7 +11,7 @@ cfg:
   epochs: 100
   head: stego_original
   optimizer: stego
-  num_workers: 10
+  num_workers: 24
   max_steps: 500000
   batch_size: 8
   num_neighbors: 7
@@ -82,7 +82,7 @@ progress_bar: false
 epochs: 100
 head: stego_original
 optimizer: stego
-num_workers: 10
+num_workers: 24
 max_steps: 500000
 batch_size: 8
 num_neighbors: 7
